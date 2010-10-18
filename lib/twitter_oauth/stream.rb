@@ -9,7 +9,7 @@ module TwitterOAuth
 
     private
     def stream_get(path)
-      response = open('http://stream.twitter.com' + path, 'User-Agent' => 'github.com/moomerman/twitter_oauth')
+      response = open('http://stream.twitter.com/1/statuses' + path, 'User-Agent' => 'github.com/moomerman/twitter_oauth')
       JSON.parse(response.read)
     end
   end
